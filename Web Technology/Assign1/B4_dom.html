@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <script>
+        function changeContent(){
+            document.getElementById("msg").innerHTML = "Text Changed Successfully";
+            document.body.style.backgroundColor = "yellow";
+            var p = document.createElement("p");
+            p.innerHTML = "New Paragraph Added";
+            document.body.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <h2 id="msg">Original Text</h2>
+
+    <button onclick="changeContent()">Click Here</button>
+
+    <br><br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

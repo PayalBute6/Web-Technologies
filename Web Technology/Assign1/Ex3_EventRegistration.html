@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <script>
+        function registerEvent(){
+            var name = document.getElementById("name").value;
+            if(name == ""){
+                alert("Please enter your name!");
+                return false;
+            }
+            alert("Registration successful for " + name);
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+    <form onsubmit="return registerEvent()">
+        Full Name: <input type="text" id="name"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Select Event: 
+        <select id="event">
+            <option>Web Development Workshop</option>
+            <option>Coding Competition</option>
+            <option>Tech Quiz</option>
+        </select>
+        <br><br>
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+    <br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive News Portal</title>
+    <style>
+        header {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .news-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .main-news {
+            flex: 2;
+            border: 1px solid gray;
+            padding: 15px;
+        }
+        .sidebar {
+            flex: 1;
+            border: 1px solid gray;
+            padding: 15px;
+            background-color: #f0f0f0;
+        }
+        @media(max-width: 600px) {
+            .news-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Global Daily News</h1>
+    </header>
+
+    <marquee bgcolor="yellow"><b>Breaking News:</b> HTML5 & CSS3 Practical Exam schedules announced for 2026!</marquee>
+
+    <div class="news-container">
+        <div class="main-news">
+            <h2>Web Technology Trends in 2026</h2>
+            <p>HTML5 semantic elements, CSS Flexbox, and CSS Grid layouts have revolutionized modern web design, making websites fully responsive across all device sizes.</p>
+        </div>
+
+        <div class="sidebar">
+            <h3>Trending News</h3>
+            <ul>
+                <li>AI in Web Development</li>
+                <li>New JavaScript Features</li>
+                <li>Cloud Computing Updates</li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

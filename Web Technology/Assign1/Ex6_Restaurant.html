@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spice Garden Restaurant</title>
+    <style>
+        header {
+            background-color: orange;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spice Garden Restaurant</h1>
+    </header>
+
+    <h2>Food Menu</h2>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Paneer Butter Masala</td>
+            <td>Main Course</td>
+            <td>Rs. 250</td>
+        </tr>
+        <tr>
+            <td>Veg Biryani</td>
+            <td>Main Course</td>
+            <td>Rs. 200</td>
+        </tr>
+        <tr>
+            <td>Gulab Jamun</td>
+            <td>Dessert</td>
+            <td>Rs. 80</td>
+        </tr>
+    </table>
+
+    <h2>Table Reservation</h2>
+    <form onsubmit="alert('Table Reserved!'); return false;">
+        Name: <input type="text" required><br><br>
+        No. of Persons: <input type="number" required><br><br>
+        <input type="submit" value="Reserve Table">
+    </form>
+
+    <br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

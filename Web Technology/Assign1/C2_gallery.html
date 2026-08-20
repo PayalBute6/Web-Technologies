@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <script>
+        function showImage(img){
+            document.getElementById("main").src = img.src;
+        }
+    </script>
+</head>
+<body>
+    <h2>Interactive Image Gallery</h2>
+    
+    <img id="main" src="https://via.placeholder.com/400x250/3498db/ffffff?text=Main+Image" width="400">
+    <br><br>
+    
+    <img src="https://via.placeholder.com/400x250/3498db/ffffff?text=Image+1" width="100" onclick="showImage(this)">
+    <img src="https://via.placeholder.com/400x250/e74c3c/ffffff?text=Image+2" width="100" onclick="showImage(this)">
+    <img src="https://via.placeholder.com/400x250/2ecc71/ffffff?text=Image+3" width="100" onclick="showImage(this)">
+
+    <br><br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

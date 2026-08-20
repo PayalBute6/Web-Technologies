@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Royal Palace</title>
+    <style>
+        header {
+            background-color: darkred;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .form-section {
+            border: 1px solid red;
+            padding: 15px;
+            width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Royal Palace</h1>
+        <p>Welcome to luxury and comfort</p>
+    </header>
+
+    <h2>Our Room Categories</h2>
+    <ul>
+        <li>Deluxe Room - Rs. 3,000 / night</li>
+        <li>Super Deluxe Room - Rs. 5,000 / night</li>
+        <li>Executive Suite - Rs. 8,000 / night</li>
+    </ul>
+
+    <div class="form-section">
+        <h3>Book Your Stay</h3>
+        Check-in Date: <input type="date"><br><br>
+        Check-out Date: <input type="date"><br><br>
+        Room Type:
+        <select>
+            <option>Deluxe</option>
+            <option>Super Deluxe</option>
+            <option>Executive Suite</option>
+        </select><br><br>
+        <button onclick="alert('Room Booking Request Sent!')">Book Now</button>
+    </div>
+
+    <br><br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>

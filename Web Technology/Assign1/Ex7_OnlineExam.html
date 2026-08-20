@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination Form</title>
+    <script>
+        function checkResult(){
+            var score = 0;
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            var q2 = document.querySelector('input[name="q2"]:checked');
+
+            if(q1 && q1.value == "HTML5") score += 5;
+            if(q2 && q2.value == "flex") score += 5;
+
+            alert("Your Total Score = " + score + " / 10");
+        }
+    </script>
+</head>
+<body>
+    <h2>Online Examination Test</h2>
+    <form onsubmit="checkResult(); return false;">
+        <p><b>Q1. What is the latest version of HTML?</b></p>
+        <input type="radio" name="q1" value="HTML4"> HTML4<br>
+        <input type="radio" name="q1" value="HTML5"> HTML5<br>
+
+        <p><b>Q2. Which CSS layout is 1-dimensional?</b></p>
+        <input type="radio" name="q2" value="flex"> Flexbox<br>
+        <input type="radio" name="q2" value="grid"> Grid<br>
+        <br>
+        <input type="submit" value="Submit Test">
+    </form>
+
+    <br>
+    <a href="index.html">Back to Index</a>
+</body>
+</html>
