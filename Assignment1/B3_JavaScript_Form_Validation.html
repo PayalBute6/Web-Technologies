@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Validation</title> 
+<script> 
+function validate(){ 
+var email =document.getElementById("email").value; 
+var pass =document.getElementById("pass").value; 
+if(email==""){ 
+    alert("Email Required"); 
+    return false; 
+} 
+if(pass.length<6){ 
+    alert("Password must contain 6 characters"); 
+    return false; 
+} 
+} 
+</script> 
+</head> 
+<body> 
+<form onsubmit="return validate()"> 
+Email: <input type="text" id="email"> 
+<br><br> 
+Password:<input type="password" id="pass"> 
+<br><br> 
+<input type="submit"> 
+</form> 
+</body> 
+</html>

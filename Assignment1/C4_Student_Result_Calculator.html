@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<input type="number" id="m1" placeholder="Subject 1"><br><br> 
+<input type="number" id="m2" placeholder="Subject 2"><br><br> 
+<input type="number" id="m3" placeholder="Subject 3"><br><br> 
+<input type="number" id="m4" placeholder="Subject 4"><br><br> 
+<input type="number" id="m5" placeholder="Subject 5"><br><br> 
+<button onclick="calculate()"> 
+Calculate 
+</button> 
+<h3 id="result"></h3> 
+<script> 
+function calculate(){ 
+let total=Number(m1.value)+ Number(m2.value)+Number(m3.value)+Number(m4.value)+ 
+Number(m5.value); 
+let percentage= total/5; 
+let grade; 
+if(percentage>=75) 
+grade="A"; 
+else if(percentage>=60) 
+grade="B"; 
+else if(percentage>=50) 
+grade="C"; 
+else 
+grade="Fail"; 
+document.getElementById("result") 
+.innerHTML= 
+"Total = "+total+ 
+"<br>Percentage = "+percentage+ 
+"<br>Grade = "+grade; 
+} 
+</script> 
+</body> 
+</html>

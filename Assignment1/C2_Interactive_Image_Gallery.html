@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script> 
+function showImage(img){ 
+document.getElementById("main") 
+.src=img.src; 
+} 
+</script> 
+</head> 
+<body> 
+<img id="main" 
+src="img1.jpg" 
+width="400"> 
+<br><br> 
+<img src="img1.jpg" 
+width="100" 
+onclick="showImage(this)"> 
+<img src="img2.jpg" 
+width="100" 
+onclick="showImage(this)"> 
+<img src="img3.jpg" 
+width="100" 
+onclick="showImage(this)"> 
+</body> 
+</html>
