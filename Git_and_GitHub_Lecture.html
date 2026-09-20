@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git and GitHub - Simplified Lecture Notes</title>
+    <title>Git and GitHub</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +15,9 @@
             color: #333;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: #222;
         }
 
@@ -53,7 +56,8 @@
             margin-bottom: 20px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ccc;
             padding: 8px;
             text-align: left;
@@ -71,27 +75,29 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>Git & GitHub - Simplified Practical Lecture Notes</h1>
+        <h1>Git & GitHub</h1>
     </header>
 
     <div class="container">
-        
+
         <section>
             <h2>2. What is Git?</h2>
             <h3>Simple definition</h3>
             <p>Git is a Version Control System used to track changes in source code.</p>
-            <p>Git was created by Linus Torvalds in 2005 and is distributed, meaning each developer can have a complete copy of the project's history.</p>
-            
+            <p>Git was created by Linus Torvalds in 2005 and is distributed, meaning each developer can have a complete
+                copy of the project's history.</p>
+
             <h3>Think of Git as:</h3>
             <pre>Your Computer
       ↓
      Git
       ↓
 Tracks your project changes</pre>
-            
+
             <p>For example:</p>
             <pre>MyProject/
    ├── Login.java
@@ -127,15 +133,125 @@ Git
 GitHub
    ↓
 Online Repository</pre>
-            
+
             <p>Git = Version control<br>GitHub = Online hosting + collaboration</p>
+        </section>
+
+        <section>
+            <h2>4. Git Commands</h2>
+
+            <h3>STEP 0 — Install & Check Git</h3>
+            <p><strong>Windows:</strong> Download from the official website or install using Winget:</p>
+            <pre><code>winget install --id Git.Git -e --source winget</code></pre>
+            <p><strong>Linux (Ubuntu/Debian):</strong> Install using apt:</p>
+            <pre><code>sudo apt update
+sudo apt install git</code></pre>
+            <p>After installing Git, open <strong>Git Bash</strong> (on Windows) or your terminal.</p>
+            <p>Check Git:</p>
+            <pre><code>git --version</code></pre>
+
+            <hr>
+
+            <h3>STEP 1 — Configure Git</h3>
+            <p>Do this <strong>only once</strong> on your computer.</p>
+            <p><strong>Set your name</strong></p>
+            <pre><code>git config --global user.name "Your Name"</code></pre>
+            <p><strong>Set your email</strong></p>
+            <pre><code>git config --global user.email "your@email.com"</code></pre>
+
+            <hr>
+
+            <h3>STEP 2 — Start Git in a Project</h3>
+            <p>Open the terminal inside your project folder and run:</p>
+            <pre><code>git init</code></pre>
+            <p>Now Git starts tracking the project files.</p>
+
+            <hr>
+
+            <h3>STEP 3 — Check Status</h3>
+            <p>Always use this command to see what files are modified:</p>
+            <pre><code>git status</code></pre>
+
+            <hr>
+
+            <h3>STEP 4 — Add Files (Stage)</h3>
+            <p>To tell Git to prepare all modified files for saving:</p>
+            <pre><code>git add .</code></pre>
+
+            <hr>
+
+            <h3>STEP 5 — Commit (Save)</h3>
+            <p>Create a checkpoint (save) with a descriptive message:</p>
+            <pre><code>git commit -m "Initial commit"</code></pre>
+            <blockquote><strong>ADD = Prepare</strong><br><strong>COMMIT = Save</strong></blockquote>
+
+            <hr>
+
+            <h3>STEP 6 — Connect & Push to GitHub</h3>
+            <p>Connect your local Git to a new GitHub repository:</p>
+            <pre><code>git remote add origin YOUR_GITHUB_URL</code></pre>
+            <p>Ensure you are on the main branch:</p>
+            <pre><code>git branch -M main</code></pre>
+            <p>Send your code to GitHub:</p>
+            <pre><code>git push -u origin main</code></pre>
+
+            <hr>
+
+            <h3>🎯 The Daily Workflow</h3>
+            <p>Once everything is set up, you will use this cycle every day:</p>
+            <pre><code>git status
+git add .
+git commit -m "Update message"
+git push</code></pre>
+        </section>
+
+        <section>
+            <h2>5. Branching & Merging</h2>
+            <p>Branches allow you to work on new features or experiments without affecting the main project code.</p>
+
+            <h3>1. See all branches</h3>
+            <p>To list all branches in your repository (the current branch has an asterisk <code>*</code> next to it):
+            </p>
+            <pre><code>git branch</code></pre>
+
+            <h3>2. Create a new branch</h3>
+            <p>To create a new branch named <code>feature-login</code>:</p>
+            <pre><code>git branch feature-login</code></pre>
+
+            <h3>3. Switch to a branch</h3>
+            <p>To move to the branch you just created:</p>
+            <pre><code>git switch feature-login</code></pre>
+            <p><em>(Note: older versions of Git used <code>git checkout feature-login</code>)</em></p>
+
+            <h3>4. Create and Switch in one command (Shortcut)</h3>
+            <p>To create a new branch and immediately switch to it:</p>
+            <pre><code>git switch -c feature-login</code></pre>
+
+            <hr>
+
+            <h3>Merging Branches</h3>
+            <p>Once you finish working on your new branch, you usually want to merge those changes back into the
+                <code>main</code> branch.</p>
+
+            <p><strong>Step 1:</strong> Switch back to the main branch:</p>
+            <pre><code>git switch main</code></pre>
+
+            <p><strong>Step 2:</strong> Merge the feature branch into main:</p>
+            <pre><code>git merge feature-login</code></pre>
+
+            <hr>
+
+            <h3>5. Delete a Branch</h3>
+            <p>Once you have merged a branch and no longer need it, you can delete it safely:</p>
+            <pre><code>git branch -d feature-login</code></pre>
         </section>
 
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
         &copy; Simplified Lecture Notes - Git and GitHub
-    </div>
+    </div> -->
 
 </body>
+
 </html>
