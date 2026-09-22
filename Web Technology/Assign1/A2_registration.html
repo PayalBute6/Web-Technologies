@@ -2,13 +2,70 @@
 <html>
 <head>
     <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Simple styling for text-based inputs */
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Simple styling for radio buttons */
+        input[type="radio"] {
+            accent-color: #2196F3;
+        }
+        /* Simple styling for dropdowns */
+        select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Simple styling for checkboxes */
+        input[type="checkbox"] {
+            accent-color: #4CAF50;
+        }
+        /* Simple styling for dates */
+        input[type="date"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Simple styling for text areas */
+        textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            height: 60px;
+        }
+        /* Simple styling for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+        }
+        /* Simple styling for the reset button */
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
     <h2>Student Registration Form</h2>
     <form>
+        <!--Personal Information-->
         Name: <input type="text" id="name"><br><br>
         Email: <input type="email" id="email"><br><br>
         Password: <input type="password" id="password"><br><br>
+        <!--Gender-->
         Gender: 
         <input type="radio" name="gender" value="male"> Male
         <input type="radio" name="gender" value="female"> Female
@@ -20,9 +77,21 @@
             <option>BSc IT</option>
         </select>
         <br><br>
+        Subjects: 
+        <input type="checkbox" name="subject" value="math"> Mathematics
+        <input type="checkbox" name="subject" value="physics"> Physics
+        <input type="checkbox" name="subject" value="cs"> Computer Science
+        <br><br>
+        <!--Date of Birth-->
+        Date of Birth: <input type="date" id="dob"><br><br>
+        <!--Contact Number-->
+        Contact Number: <input type="tel" id="contact" placeholder="1234567890"><br><br>
+        Address: <textarea id="address"></textarea><br><br>
+        Agree to Terms: <input type="checkbox" id="terms"><br><br>
+        <!--Submit and Reset Buttons-->
         <input type="submit" value="Register">
+        <input type="reset" value="Reset">
     </form>
     <br>
-
 </body>
 </html>
