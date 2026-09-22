@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beginner HTML & CSS Example</title>
+  <style>
+    /* Basic Page Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header and Footer */
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Navigation Bar using Flexbox */
+    nav {
+      background-color: #0066cc;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    /* Main Content Layout using Grid */
+    main {
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    
+    article {
+      padding-right: 20px;
+    }
+
+    /* Text & Formatting */
+    h1, h2, h3 {
+      color: #0066cc;
+    }
+
+    mark {
+      background-color: yellow;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0066cc;
+      color: white;
+    }
+
+    /* Forms */
+    form {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box; /* keeps padding inside width */
+    }
+
+    button {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Responsive Design (Mobile view) */
+    @media (max-width: 600px) {
+      main {
+        display: block; /* Turns off the grid on small screens */
+      }
+      nav ul {
+        display: block; /* Stacks the links */
+        text-align: center;
+      }
+      nav li {
+        margin-bottom: 10px;
+      }
+      article {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My First Website</h1>
+    <p>Learning HTML and CSS is fun!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Welcome to the Course</h2>
+      <p>This paragraph shows <strong>bold text</strong>, <em>italic text</em>, and <mark>highlighted text</mark>.</p>
+      
+      <blockquote>
+        "HTML is the structure, CSS is the style."
+      </blockquote>
+
+      <h3>Student Grades Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rahul</td>
+            <td>HTML</td>
+            <td>95</td>
+          </tr>
+          <tr>
+            <td>Anita</td>
+            <td>CSS</td>
+            <td>88</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <aside>
+      <form>
+        <fieldset>
+          <legend>Contact Us</legend>
+          
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+          
+          <label for="course">Course:</label>
+          <select id="course">
+            <option value="bca">BCA</option>
+            <option value="bsc">BSc CS</option>
+          </select>
+          
+          <label for="msg">Message:</label>
+          <textarea id="msg" rows="3" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </fieldset>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Web Tech Student.</p>
+  </footer>
+
+</body>
+</html>
